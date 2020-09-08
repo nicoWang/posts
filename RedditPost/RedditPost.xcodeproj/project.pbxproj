@@ -21,6 +21,11 @@
 		03685A842507EF3E00764D95 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A802507EF3E00764D95 /* UIView.swift */; };
 		03685A852507EF3E00764D95 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A812507EF3E00764D95 /* UITableView.swift */; };
 		03685A892507F21D00764D95 /* top.json in Resources */ = {isa = PBXBuildFile; fileRef = 03685A882507F21D00764D95 /* top.json */; };
+		03685A922507F3B600764D95 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A902507F3B600764D95 /* PostViewController.swift */; };
+		03685A932507F3B600764D95 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03685A912507F3B600764D95 /* PostViewController.xib */; };
+		03685A972507F3CF00764D95 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A952507F3CF00764D95 /* PostCell.swift */; };
+		03685A982507F3CF00764D95 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03685A962507F3CF00764D95 /* PostCell.xib */; };
+		03685A9E2507F42100764D95 /* PostModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A9D2507F42100764D95 /* PostModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,11 @@
 		03685A802507EF3E00764D95 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		03685A812507EF3E00764D95 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		03685A882507F21D00764D95 /* top.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = top.json; sourceTree = "<group>"; };
+		03685A902507F3B600764D95 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		03685A912507F3B600764D95 /* PostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
+		03685A952507F3CF00764D95 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		03685A962507F3CF00764D95 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		03685A9D2507F42100764D95 /* PostModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +163,7 @@
 		03685A6D2507CE0E00764D95 /* Front */ = {
 			isa = PBXGroup;
 			children = (
+				03685A8A2507F36300764D95 /* Posts */,
 				03685A7D2507EF2300764D95 /* Extension */,
 			);
 			path = Front;
@@ -208,6 +219,66 @@
 				03685A882507F21D00764D95 /* top.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		03685A8A2507F36300764D95 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				03685A9C2507F40B00764D95 /* Interactor */,
+				03685A9B2507F40300764D95 /* Presenter */,
+				03685A9A2507F3FC00764D95 /* Wireframe */,
+				03685A992507F3F400764D95 /* Module */,
+				03685A8F2507F39100764D95 /* View */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		03685A8F2507F39100764D95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03685A942507F3BE00764D95 /* Cell */,
+				03685A902507F3B600764D95 /* PostViewController.swift */,
+				03685A912507F3B600764D95 /* PostViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03685A942507F3BE00764D95 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				03685A952507F3CF00764D95 /* PostCell.swift */,
+				03685A962507F3CF00764D95 /* PostCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		03685A992507F3F400764D95 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				03685A9D2507F42100764D95 /* PostModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		03685A9A2507F3FC00764D95 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		03685A9B2507F40300764D95 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		03685A9C2507F40B00764D95 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +385,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03685A932507F3B600764D95 /* PostViewController.xib in Resources */,
 				03685A492507CD6D00764D95 /* LaunchScreen.storyboard in Resources */,
+				03685A982507F3CF00764D95 /* PostCell.xib in Resources */,
 				03685A462507CD6D00764D95 /* Assets.xcassets in Resources */,
 				03685A442507CD6500764D95 /* Main.storyboard in Resources */,
 			);
@@ -342,14 +415,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03685A922507F3B600764D95 /* PostViewController.swift in Sources */,
 				03685A3D2507CD6500764D95 /* AppDelegate.swift in Sources */,
 				03685A822507EF3E00764D95 /* UIImageView.swift in Sources */,
 				03685A742507CE6700764D95 /* RedditModel.swift in Sources */,
 				03685A842507EF3E00764D95 /* UIView.swift in Sources */,
 				03685A832507EF3E00764D95 /* UITableViewCell.swift in Sources */,
 				03685A852507EF3E00764D95 /* UITableView.swift in Sources */,
+				03685A9E2507F42100764D95 /* PostModule.swift in Sources */,
 				03685A712507CE3900764D95 /* Request.swift in Sources */,
 				03685A3F2507CD6500764D95 /* SceneDelegate.swift in Sources */,
+				03685A972507F3CF00764D95 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
