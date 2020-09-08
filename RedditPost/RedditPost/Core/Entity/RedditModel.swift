@@ -20,7 +20,7 @@ struct RedditPostModel: Codable {
     var numComments: Int?
     var thumbnail: String?
     var createdUtc: Double?
-    var readed: Bool = false
+    var readed: Bool? = false
     var visited: Bool = false
     var saved: Bool = false
     var authorFullname: String?
