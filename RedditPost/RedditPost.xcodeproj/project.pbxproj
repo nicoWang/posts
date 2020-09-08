@@ -26,6 +26,9 @@
 		03685A972507F3CF00764D95 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A952507F3CF00764D95 /* PostCell.swift */; };
 		03685A982507F3CF00764D95 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03685A962507F3CF00764D95 /* PostCell.xib */; };
 		03685A9E2507F42100764D95 /* PostModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A9D2507F42100764D95 /* PostModule.swift */; };
+		03685AA02508117500764D95 /* PostWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A9F2508117500764D95 /* PostWireframe.swift */; };
+		03685AA22508119400764D95 /* PostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685AA12508119400764D95 /* PostPresenter.swift */; };
+		03685AA4250811B100764D95 /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685AA3250811B100764D95 /* PostInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		03685A952507F3CF00764D95 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		03685A962507F3CF00764D95 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		03685A9D2507F42100764D95 /* PostModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModule.swift; sourceTree = "<group>"; };
+		03685A9F2508117500764D95 /* PostWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWireframe.swift; sourceTree = "<group>"; };
+		03685AA12508119400764D95 /* PostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenter.swift; sourceTree = "<group>"; };
+		03685AA3250811B100764D95 /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +269,7 @@
 		03685A9A2507F3FC00764D95 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				03685A9F2508117500764D95 /* PostWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -270,6 +277,7 @@
 		03685A9B2507F40300764D95 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				03685AA12508119400764D95 /* PostPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -277,6 +285,7 @@
 		03685A9C2507F40B00764D95 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				03685AA3250811B100764D95 /* PostInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -416,15 +425,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				03685A922507F3B600764D95 /* PostViewController.swift in Sources */,
+				03685AA22508119400764D95 /* PostPresenter.swift in Sources */,
 				03685A3D2507CD6500764D95 /* AppDelegate.swift in Sources */,
 				03685A822507EF3E00764D95 /* UIImageView.swift in Sources */,
 				03685A742507CE6700764D95 /* RedditModel.swift in Sources */,
 				03685A842507EF3E00764D95 /* UIView.swift in Sources */,
 				03685A832507EF3E00764D95 /* UITableViewCell.swift in Sources */,
 				03685A852507EF3E00764D95 /* UITableView.swift in Sources */,
+				03685AA4250811B100764D95 /* PostInteractor.swift in Sources */,
 				03685A9E2507F42100764D95 /* PostModule.swift in Sources */,
 				03685A712507CE3900764D95 /* Request.swift in Sources */,
 				03685A3F2507CD6500764D95 /* SceneDelegate.swift in Sources */,
+				03685AA02508117500764D95 /* PostWireframe.swift in Sources */,
 				03685A972507F3CF00764D95 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
