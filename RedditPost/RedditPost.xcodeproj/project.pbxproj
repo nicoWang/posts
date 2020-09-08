@@ -16,6 +16,10 @@
 		03685A5F2507CD6E00764D95 /* RedditPostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A5E2507CD6E00764D95 /* RedditPostUITests.swift */; };
 		03685A712507CE3900764D95 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A702507CE3900764D95 /* Request.swift */; };
 		03685A742507CE6700764D95 /* RedditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A732507CE6700764D95 /* RedditModel.swift */; };
+		03685A822507EF3E00764D95 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A7E2507EF3D00764D95 /* UIImageView.swift */; };
+		03685A832507EF3E00764D95 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A7F2507EF3E00764D95 /* UITableViewCell.swift */; };
+		03685A842507EF3E00764D95 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A802507EF3E00764D95 /* UIView.swift */; };
+		03685A852507EF3E00764D95 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A812507EF3E00764D95 /* UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		03685A602507CD6E00764D95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03685A702507CE3900764D95 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		03685A732507CE6700764D95 /* RedditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditModel.swift; sourceTree = "<group>"; };
+		03685A7E2507EF3D00764D95 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		03685A7F2507EF3E00764D95 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		03685A802507EF3E00764D95 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		03685A812507EF3E00764D95 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +150,7 @@
 		03685A6D2507CE0E00764D95 /* Front */ = {
 			isa = PBXGroup;
 			children = (
+				03685A7D2507EF2300764D95 /* Extension */,
 			);
 			path = Front;
 			sourceTree = "<group>";
@@ -169,6 +178,17 @@
 				03685A732507CE6700764D95 /* RedditModel.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		03685A7D2507EF2300764D95 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				03685A7E2507EF3D00764D95 /* UIImageView.swift */,
+				03685A812507EF3E00764D95 /* UITableView.swift */,
+				03685A7F2507EF3E00764D95 /* UITableViewCell.swift */,
+				03685A802507EF3E00764D95 /* UIView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				03685A3D2507CD6500764D95 /* AppDelegate.swift in Sources */,
+				03685A822507EF3E00764D95 /* UIImageView.swift in Sources */,
 				03685A742507CE6700764D95 /* RedditModel.swift in Sources */,
+				03685A842507EF3E00764D95 /* UIView.swift in Sources */,
+				03685A832507EF3E00764D95 /* UITableViewCell.swift in Sources */,
+				03685A852507EF3E00764D95 /* UITableView.swift in Sources */,
 				03685A712507CE3900764D95 /* Request.swift in Sources */,
 				03685A3F2507CD6500764D95 /* SceneDelegate.swift in Sources */,
 			);
