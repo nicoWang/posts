@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PostView: AnyObject {
-    
+    func refresh()
 }
 
 final class PostViewController: UIViewController {
@@ -25,7 +25,9 @@ final class PostViewController: UIViewController {
 }
 
 extension PostViewController: PostView {
-    
+    func refresh() {
+        tableView.reloadData()
+    }
 }
 
 extension PostViewController: UITableViewDelegate, UITableViewDataSource {
