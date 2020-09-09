@@ -15,7 +15,7 @@ protocol PostView: AnyObject {
 final class PostViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
-    
+    private var refreshControl: UIRefreshControl = UIRefreshControl()
     var presenter: PostPresenterProtocol?
 
     override func viewDidLoad() {
@@ -26,6 +26,9 @@ final class PostViewController: UIViewController {
 
 extension PostViewController: PostView {
     func refresh() {
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
         tableView.reloadData()
     }
 }
@@ -57,5 +60,12 @@ private extension PostViewController {
         tableView.dataSource = self
         tableView.register(PostCell.self)
         presenter?.viewDidLoad()
+        refreshControl.addTarget(self, action: #selector(reloadPosts), for: .valueChanged)
+        refreshControl.tintColor = .white
+        tableView.addSubview(refreshControl)
+    }
+    
+    @objc func reloadPosts() {
+        presenter?.reloadPosts()
     }
 }
