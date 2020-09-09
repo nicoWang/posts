@@ -31,6 +31,10 @@
 		03685AA4250811B100764D95 /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685AA3250811B100764D95 /* PostInteractor.swift */; };
 		03958A4225091DC300359AF9 /* PostApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A4125091DC300359AF9 /* PostApi.swift */; };
 		03958A4525091EE900359AF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A4425091EE900359AF9 /* Constants.swift */; };
+		03958A4C25095B3400359AF9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A4A25095B3400359AF9 /* DetailViewController.swift */; };
+		03958A4D25095B3400359AF9 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03958A4B25095B3400359AF9 /* DetailViewController.xib */; };
+		03958A4F25095CCA00359AF9 /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A4E25095CCA00359AF9 /* DetailModule.swift */; };
+		03958A5125095D0C00359AF9 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A5025095D0C00359AF9 /* DetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		03685AA3250811B100764D95 /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
 		03958A4125091DC300359AF9 /* PostApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApi.swift; sourceTree = "<group>"; };
 		03958A4425091EE900359AF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		03958A4A25095B3400359AF9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		03958A4B25095B3400359AF9 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		03958A4E25095CCA00359AF9 /* DetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
+		03958A5025095D0C00359AF9 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,7 @@
 		03685A6D2507CE0E00764D95 /* Front */ = {
 			isa = PBXGroup;
 			children = (
+				03958A4625095B0900359AF9 /* Detail */,
 				03685A8A2507F36300764D95 /* Posts */,
 				03685A7D2507EF2300764D95 /* Extension */,
 			);
@@ -312,6 +321,41 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		03958A4625095B0900359AF9 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				03958A4925095B2100359AF9 /* Module */,
+				03958A4825095B1A00359AF9 /* View */,
+				03958A4725095B1400359AF9 /* Presenter */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		03958A4725095B1400359AF9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				03958A5025095D0C00359AF9 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		03958A4825095B1A00359AF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03958A4A25095B3400359AF9 /* DetailViewController.swift */,
+				03958A4B25095B3400359AF9 /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03958A4925095B2100359AF9 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				03958A4E25095CCA00359AF9 /* DetailModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -417,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03685A932507F3B600764D95 /* PostViewController.xib in Resources */,
+				03958A4D25095B3400359AF9 /* DetailViewController.xib in Resources */,
 				03685A492507CD6D00764D95 /* LaunchScreen.storyboard in Resources */,
 				03685A982507F3CF00764D95 /* PostCell.xib in Resources */,
 				03685A462507CD6D00764D95 /* Assets.xcassets in Resources */,
@@ -447,13 +492,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				03685A922507F3B600764D95 /* PostViewController.swift in Sources */,
+				03958A4C25095B3400359AF9 /* DetailViewController.swift in Sources */,
 				03685AA22508119400764D95 /* PostPresenter.swift in Sources */,
 				03685A3D2507CD6500764D95 /* AppDelegate.swift in Sources */,
 				03685A822507EF3E00764D95 /* UIImageView.swift in Sources */,
 				03685A742507CE6700764D95 /* RedditModel.swift in Sources */,
 				03685A842507EF3E00764D95 /* UIView.swift in Sources */,
 				03685A832507EF3E00764D95 /* UITableViewCell.swift in Sources */,
+				03958A4F25095CCA00359AF9 /* DetailModule.swift in Sources */,
 				03958A4525091EE900359AF9 /* Constants.swift in Sources */,
+				03958A5125095D0C00359AF9 /* DetailPresenter.swift in Sources */,
 				03685A852507EF3E00764D95 /* UITableView.swift in Sources */,
 				03685AA4250811B100764D95 /* PostInteractor.swift in Sources */,
 				03685A9E2507F42100764D95 /* PostModule.swift in Sources */,
