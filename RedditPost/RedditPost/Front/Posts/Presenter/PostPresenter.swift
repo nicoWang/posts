@@ -11,20 +11,20 @@ import Foundation
 protocol PostPresenterProtocol: AnyObject {
     func numberOfRows() -> Int
     func post(at index: Int) -> RedditModel?
+    func viewDidLoad()
 }
 
 class PostPresenter: PostPresenterProtocol {
     private let view: PostView
-    private let interactor: PostInteractorProtocol
-    private let wireframe: PostWireframeProtocol
+    var interactor: PostInteractorProtocol?
+    var wireframe: PostWireframeProtocol?
     private var posts: [RedditModel]?
     
-    init(view: PostView,
-         interactor: PostInteractorProtocol,
-         wireframe: PostWireframeProtocol) {
+    init(view: PostView) {
         self.view = view
-        self.interactor = interactor
-        self.wireframe = wireframe
+    }
+    
+    func viewDidLoad() {
         bind()
     }
     
@@ -45,7 +45,7 @@ private extension PostPresenter {
     }
     
     func getPosts() {
-        interactor.getPosts(completion: { posts in
+        interactor?.getPosts(completion: { posts in
             DispatchQueue.main.async {
                 self.posts = posts
                 self.view.refresh()

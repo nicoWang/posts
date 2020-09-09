@@ -40,6 +40,10 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
         let cell: PostCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
 }
 
 private extension PostViewController {
@@ -47,6 +51,6 @@ private extension PostViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(PostCell.self)
-        tableView.rowHeight = UITableView.automaticDimension
+        presenter?.viewDidLoad()
     }
 }

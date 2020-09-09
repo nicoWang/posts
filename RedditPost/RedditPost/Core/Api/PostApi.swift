@@ -14,11 +14,7 @@ protocol PostApiProtocol: AnyObject {
 
 final class PostApi: PostApiProtocol {
     
-    private let interactor: PostInteractorProtocol
-    
-    init(interactor: PostInteractorProtocol) {
-        self.interactor = interactor
-    }
+    var interactor: PostInteractorProtocol?
     
     func getPosts(completion: @escaping ([RedditModel]) -> Void) {
         Request<[RedditModel]>.get(self, path: "data.children", url: Constants.posturl, success: completion)

@@ -13,12 +13,10 @@ protocol PostInteractorProtocol: AnyObject {
 }
 
 final class PostInteractor: PostInteractorProtocol {
-    private let presenter: PostPresenterProtocol
+    var presenter: PostPresenterProtocol?
     private let api: PostApiProtocol
     
-    init(presenter: PostPresenterProtocol,
-         api: PostApiProtocol) {
-        self.presenter = presenter
+    init(api: PostApiProtocol) {
         self.api = api
     }
     
