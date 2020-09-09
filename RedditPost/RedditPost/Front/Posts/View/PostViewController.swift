@@ -38,16 +38,21 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PostCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        if let post = presenter?.post(at: indexPath.row) {
+            cell.update(with: post)            
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 160
     }
 }
 
 private extension PostViewController {
     func bind() {
+        view.backgroundColor = .black
+        tableView.backgroundColor = .black
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(PostCell.self)
