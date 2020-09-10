@@ -10,11 +10,18 @@ import UIKit
 
 protocol PostView: AnyObject {
     func refresh()
+    func remove(at index: Int)
 }
 
 final class PostViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var dismissButton: UIButton! {
+        didSet {
+            dismissButton.setTitleColor(.orange, for: .normal)
+            dismissButton.addTarget(self, action: #selector(dismissAll), for: .touchUpInside)
+        }
+    }
     private var refreshControl: UIRefreshControl = UIRefreshControl()
     var presenter: PostPresenterProtocol?
 
@@ -31,6 +38,14 @@ extension PostViewController: PostView {
         }
         tableView.reloadData()
     }
+    
+    func remove(at index: Int) {
+        tableView.performUpdate({
+            self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .right)
+        }, completion: {
+            self.tableView.reloadData()
+        })
+    }
 }
 
 extension PostViewController: UITableViewDelegate, UITableViewDataSource {
@@ -41,8 +56,9 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PostCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.delegate = self
         if let post = presenter?.post(at: indexPath.row) {
-            cell.update(with: post)            
+            cell.update(with: post, and: indexPath.row)
         }
         return cell
     }
@@ -56,6 +72,11 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension PostViewController: PostCellDelegate {
+    func buttonPressed(at index: Int) {
+        presenter?.removeItem(at: index)
+    }
+}
 private extension PostViewController {
     func bind() {
         title = "Reddit Posts"
@@ -73,4 +94,12 @@ private extension PostViewController {
     @objc func reloadPosts() {
         presenter?.reloadPosts()
     }
+    
+    @objc func dismissAll() {
+        UIView.animate(withDuration: 1, animations: {
+            self.tableView.alpha = 0
+        }, completion: nil)
+    }
+    
+
 }

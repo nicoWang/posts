@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol PostPresenterProtocol: AnyObject {
     func numberOfRows() -> Int
@@ -14,6 +15,7 @@ protocol PostPresenterProtocol: AnyObject {
     func viewDidLoad()
     func reloadPosts()
     func didSelectItem(at index: Int)
+    func removeItem(at index: Int)
 }
 
 class PostPresenter: PostPresenterProtocol {
@@ -45,8 +47,16 @@ class PostPresenter: PostPresenterProtocol {
         let item = posts[index]
         wireframe?.pushToDetail(with: item)
     }
+    
     func reloadPosts() {
         getPosts()
+    }
+    
+    func removeItem(at index: Int) {
+        guard let posts = self.posts , posts.count > index else { return }
+        self.posts?.remove(at: index)
+        self.view.remove(at: index)
+        
     }
 }
 

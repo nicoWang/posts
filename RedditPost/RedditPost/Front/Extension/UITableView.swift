@@ -43,4 +43,15 @@ extension UITableView {
         }
         return cell
     }
+    
+    func performUpdate(_ update: ()->Void, completion: (()->Void)?) {
+
+        CATransaction.begin()
+        CATransaction.setCompletionBlock(completion)
+        beginUpdates()
+        update()
+        endUpdates()
+
+        CATransaction.commit()
+    }
 }

@@ -9,12 +9,13 @@
 import UIKit
 
 protocol PostCellDelegate: AnyObject {
-    func buttonPressed()
+    func buttonPressed(at index: Int)
 }
 
 class PostCell: UITableViewCell {
 
     weak var delegate: PostCellDelegate?
+    private var index: Int = 0
     
     @IBOutlet weak var readedView: UIView! {
         didSet {
@@ -61,7 +62,8 @@ class PostCell: UITableViewCell {
         accessoryType = .disclosureIndicator
     }
     
-    func update(with item: Any?) {
+    func update(with item: Any?, and index: Int) {
+        self.index = index
         guard let data = item as? RedditModel, let post = data.data else { return }
         readedView.isHidden = !post.visited
         titleLabel.text = post.title
@@ -73,6 +75,6 @@ class PostCell: UITableViewCell {
     }
     
     @objc func buttonPressed() {
-        delegate?.buttonPressed()
+        delegate?.buttonPressed(at: index)
     }
 }
