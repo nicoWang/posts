@@ -31,7 +31,7 @@ class PostCell: UITableViewCell {
     }
     @IBOutlet private weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.numberOfLines = 0
+            titleLabel.numberOfLines = 3
             titleLabel.textColor = .white
         }
     }
@@ -56,8 +56,9 @@ class PostCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = .black
-        self.accessoryType = .disclosureIndicator
+        selectionStyle = .none
+        backgroundColor = .black
+        accessoryType = .disclosureIndicator
     }
     
     func update(with item: Any?) {

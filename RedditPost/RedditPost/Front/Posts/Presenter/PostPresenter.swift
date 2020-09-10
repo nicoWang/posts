@@ -13,6 +13,7 @@ protocol PostPresenterProtocol: AnyObject {
     func post(at index: Int) -> RedditModel?
     func viewDidLoad()
     func reloadPosts()
+    func didSelectItem(at index: Int)
 }
 
 class PostPresenter: PostPresenterProtocol {
@@ -39,6 +40,11 @@ class PostPresenter: PostPresenterProtocol {
         return posts[index]
     }
     
+    func didSelectItem(at index: Int) {
+        guard let posts = self.posts, posts.count > index else { return }
+        let item = posts[index]
+        wireframe?.pushToDetail(with: item)
+    }
     func reloadPosts() {
         getPosts()
     }

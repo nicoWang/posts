@@ -10,16 +10,17 @@ import Foundation
 import UIKit
 
 protocol PostModuleProtocol: AnyObject {
-    func postViewController() -> UIViewController
+    func postViewController() -> UINavigationController
 }
 
 class PostModule: PostModuleProtocol {
-    func postViewController() -> UIViewController {
+    func postViewController() -> UINavigationController {
         let view = PostViewController()
+        let navigation = UINavigationController(rootViewController: view)
         let api = PostApi()
         let interactor = PostInteractor(api: api)
         let presenter = PostPresenter(view: view)
-        let wireframe = PostWireframe()
+        let wireframe = PostWireframe(navigation: view.navigationController)
         
         presenter.interactor = interactor
         presenter.wireframe = wireframe
@@ -29,6 +30,7 @@ class PostModule: PostModuleProtocol {
         api.interactor = interactor
         
         view.presenter = presenter
-        return view
+        
+        return navigation
     }
 }
