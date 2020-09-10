@@ -18,6 +18,7 @@ class DetailModule: DetailModuleProtocol {
         let view = DetailViewController()
         let presenter = DetailPresenter(item: item)
         
+        presenter.view = view
         view.presenter = presenter
         return view
     }

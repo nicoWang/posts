@@ -58,6 +58,7 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
 
 private extension PostViewController {
     func bind() {
+        title = "Reddit Posts"
         view.backgroundColor = .black
         tableView.backgroundColor = .black
         tableView.delegate = self

@@ -35,6 +35,7 @@
 		03958A4D25095B3400359AF9 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03958A4B25095B3400359AF9 /* DetailViewController.xib */; };
 		03958A4F25095CCA00359AF9 /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A4E25095CCA00359AF9 /* DetailModule.swift */; };
 		03958A5125095D0C00359AF9 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A5025095D0C00359AF9 /* DetailPresenter.swift */; };
+		03A23DCA250A81EF00FB79E9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A23DC9250A81EF00FB79E9 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		03958A4B25095B3400359AF9 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		03958A4E25095CCA00359AF9 /* DetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
 		03958A5025095D0C00359AF9 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		03A23DC9250A81EF00FB79E9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				03685A812507EF3E00764D95 /* UITableView.swift */,
 				03685A7F2507EF3E00764D95 /* UITableViewCell.swift */,
 				03685A802507EF3E00764D95 /* UIView.swift */,
+				03A23DC9250A81EF00FB79E9 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				03685A852507EF3E00764D95 /* UITableView.swift in Sources */,
 				03685AA4250811B100764D95 /* PostInteractor.swift in Sources */,
 				03685A9E2507F42100764D95 /* PostModule.swift in Sources */,
+				03A23DCA250A81EF00FB79E9 /* UIViewController.swift in Sources */,
 				03958A4225091DC300359AF9 /* PostApi.swift in Sources */,
 				03685A712507CE3900764D95 /* Request.swift in Sources */,
 				03685A3F2507CD6500764D95 /* SceneDelegate.swift in Sources */,

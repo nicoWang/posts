@@ -34,7 +34,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voG-b7-vzV">
-                    <rect key="frame" x="20" y="254.5" width="414" height="20.5"/>
+                    <rect key="frame" x="20" y="254.5" width="374" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                 <constraint firstItem="GVE-b3-rym" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Al7-e5-LJl"/>
                 <constraint firstAttribute="trailing" secondItem="Vfa-CH-Adb" secondAttribute="trailing" constant="20" id="EXD-Al-en0"/>
                 <constraint firstItem="Vfa-CH-Adb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="FJk-Hk-HB6"/>
-                <constraint firstItem="voG-b7-vzV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="20" id="QyA-e5-IFa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="voG-b7-vzV" secondAttribute="trailing" constant="20" id="Kdh-Ui-J37"/>
                 <constraint firstItem="GVE-b3-rym" firstAttribute="top" secondItem="Vfa-CH-Adb" secondAttribute="bottom" constant="10" id="Yqj-ZT-KmG"/>
                 <constraint firstItem="voG-b7-vzV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="mmM-t0-MFx"/>
                 <constraint firstItem="Vfa-CH-Adb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="wLQ-GF-dbV"/>
