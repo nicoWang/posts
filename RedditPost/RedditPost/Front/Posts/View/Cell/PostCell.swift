@@ -65,7 +65,7 @@ class PostCell: UITableViewCell {
     func update(with item: Any?, and index: Int) {
         self.index = index
         guard let data = item as? RedditModel, let post = data.data else { return }
-        readedView.isHidden = !post.visited
+        readedView.isHidden = post.visited
         titleLabel.text = post.title
         topLabel.text = post.author
         commentsLabel.text = "\(post.numComments ?? 0) comments"

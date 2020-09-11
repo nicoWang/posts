@@ -46,7 +46,10 @@ class PostPresenter: PostPresenterProtocol {
     
     func didSelectItem(at index: Int) {
         guard let posts = self.posts, posts.count > index else { return }
-        let item = posts[index]
+        var item = posts[index]
+        item.data?.visited = true
+        self.posts?[index] = item
+        view.refresh()
         wireframe?.pushToDetail(with: item)
     }
     
