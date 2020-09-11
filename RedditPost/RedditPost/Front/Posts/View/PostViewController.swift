@@ -98,7 +98,9 @@ private extension PostViewController {
     @objc func dismissAll() {
         UIView.animate(withDuration: 1, animations: {
             self.tableView.alpha = 0
-        }, completion: nil)
+        }, completion: { _ in
+            self.presenter?.dismissAll()
+        })
     }
     
 

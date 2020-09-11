@@ -10,19 +10,21 @@ import Foundation
 import UIKit
 
 protocol PostPresenterProtocol: AnyObject {
+    var posts: [RedditModel]? { get set }
     func numberOfRows() -> Int
     func post(at index: Int) -> RedditModel?
     func viewDidLoad()
     func reloadPosts()
     func didSelectItem(at index: Int)
     func removeItem(at index: Int)
+    func dismissAll()
 }
 
 class PostPresenter: PostPresenterProtocol {
     private let view: PostView
     var interactor: PostInteractorProtocol?
     var wireframe: PostWireframeProtocol?
-    private var posts: [RedditModel]?
+    var posts: [RedditModel]?
     
     init(view: PostView) {
         self.view = view
@@ -56,7 +58,10 @@ class PostPresenter: PostPresenterProtocol {
         guard let posts = self.posts , posts.count > index else { return }
         self.posts?.remove(at: index)
         self.view.remove(at: index)
-        
+    }
+    
+    func dismissAll() {
+        posts = []
     }
 }
 

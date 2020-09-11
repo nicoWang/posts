@@ -20,7 +20,6 @@
 		03685A832507EF3E00764D95 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A7F2507EF3E00764D95 /* UITableViewCell.swift */; };
 		03685A842507EF3E00764D95 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A802507EF3E00764D95 /* UIView.swift */; };
 		03685A852507EF3E00764D95 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A812507EF3E00764D95 /* UITableView.swift */; };
-		03685A892507F21D00764D95 /* top.json in Resources */ = {isa = PBXBuildFile; fileRef = 03685A882507F21D00764D95 /* top.json */; };
 		03685A922507F3B600764D95 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A902507F3B600764D95 /* PostViewController.swift */; };
 		03685A932507F3B600764D95 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03685A912507F3B600764D95 /* PostViewController.xib */; };
 		03685A972507F3CF00764D95 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A952507F3CF00764D95 /* PostCell.swift */; };
@@ -36,6 +35,7 @@
 		03958A4F25095CCA00359AF9 /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A4E25095CCA00359AF9 /* DetailModule.swift */; };
 		03958A5125095D0C00359AF9 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A5025095D0C00359AF9 /* DetailPresenter.swift */; };
 		03A23DCA250A81EF00FB79E9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A23DC9250A81EF00FB79E9 /* UIViewController.swift */; };
+		03A8CFD2250BFCF1006870ED /* post.json in Resources */ = {isa = PBXBuildFile; fileRef = 03A8CFD1250BFCF1006870ED /* post.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,6 @@
 		03685A7F2507EF3E00764D95 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		03685A802507EF3E00764D95 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		03685A812507EF3E00764D95 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
-		03685A882507F21D00764D95 /* top.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = top.json; sourceTree = "<group>"; };
 		03685A902507F3B600764D95 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		03685A912507F3B600764D95 /* PostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
 		03685A952507F3CF00764D95 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		03958A4E25095CCA00359AF9 /* DetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
 		03958A5025095D0C00359AF9 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		03A23DC9250A81EF00FB79E9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		03A8CFD1250BFCF1006870ED /* post.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = post.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +154,6 @@
 		03685A522507CD6E00764D95 /* RedditPostTests */ = {
 			isa = PBXGroup;
 			children = (
-				03685A872507F20700764D95 /* Resources */,
 				03685A862507F1FD00764D95 /* Test */,
 				03685A552507CD6E00764D95 /* Info.plist */,
 			);
@@ -176,6 +175,7 @@
 				03685A3C2507CD6500764D95 /* AppDelegate.swift */,
 				03685A3E2507CD6500764D95 /* SceneDelegate.swift */,
 				03685A452507CD6D00764D95 /* Assets.xcassets */,
+				03A8CFD1250BFCF1006870ED /* post.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -235,14 +235,6 @@
 				03685A532507CD6E00764D95 /* RedditPostTests.swift */,
 			);
 			path = Test;
-			sourceTree = "<group>";
-		};
-		03685A872507F20700764D95 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				03685A882507F21D00764D95 /* top.json */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		03685A8A2507F36300764D95 /* Posts */ = {
@@ -469,6 +461,7 @@
 				03685A982507F3CF00764D95 /* PostCell.xib in Resources */,
 				03685A462507CD6D00764D95 /* Assets.xcassets in Resources */,
 				03685A442507CD6500764D95 /* Main.storyboard in Resources */,
+				03A8CFD2250BFCF1006870ED /* post.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +469,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03685A892507F21D00764D95 /* top.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
