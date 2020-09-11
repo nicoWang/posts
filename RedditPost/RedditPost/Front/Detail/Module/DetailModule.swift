@@ -14,6 +14,7 @@ protocol DetailModuleProtocol: AnyObject {
 }
 
 class DetailModule: DetailModuleProtocol {
+    
     func detailView(with item: RedditModel) -> UIViewController {
         let view = DetailViewController()
         let presenter = DetailPresenter(item: item)

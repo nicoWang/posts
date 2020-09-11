@@ -10,11 +10,16 @@ import UIKit
 
 protocol DetailView: AnyObject {
     func save(image: UIImage)
+    func bind()
 }
 
 final class DetailViewController: UIViewController {
     
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text = nil
+        }
+    }
     @IBOutlet private weak var iconImage: UIImageView! {
         didSet {
             let tap = UITapGestureRecognizer(target: self, action: #selector(tapPressed))
@@ -25,6 +30,7 @@ final class DetailViewController: UIViewController {
     @IBOutlet private weak var descLabel: UILabel! {
         didSet {
             descLabel.numberOfLines = 0
+            descLabel.text = nil
         }
     }
     

@@ -30,3 +30,9 @@ class DetailPresenter: DetailPresenterProtocol {
         }
     }
 }
+extension DetailPresenter: PostWireframeDelegate {
+    func showDetail(with item: RedditModel) {
+        self.item = item
+        view?.bind()
+    }
+}

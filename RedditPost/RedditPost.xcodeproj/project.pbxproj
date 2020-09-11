@@ -36,6 +36,7 @@
 		03958A5125095D0C00359AF9 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A5025095D0C00359AF9 /* DetailPresenter.swift */; };
 		03A23DCA250A81EF00FB79E9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A23DC9250A81EF00FB79E9 /* UIViewController.swift */; };
 		03A8CFD2250BFCF1006870ED /* post.json in Resources */ = {isa = PBXBuildFile; fileRef = 03A8CFD1250BFCF1006870ED /* post.json */; };
+		03A8CFD5250C25A9006870ED /* CommonEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8CFD4250C25A9006870ED /* CommonEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		03958A5025095D0C00359AF9 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		03A23DC9250A81EF00FB79E9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		03A8CFD1250BFCF1006870ED /* post.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = post.json; sourceTree = "<group>"; };
+		03A8CFD4250C25A9006870ED /* CommonEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 		03685A6D2507CE0E00764D95 /* Front */ = {
 			isa = PBXGroup;
 			children = (
+				03A8CFD3250C2599006870ED /* Common */,
 				03958A4625095B0900359AF9 /* Detail */,
 				03685A8A2507F36300764D95 /* Posts */,
 				03685A7D2507EF2300764D95 /* Extension */,
@@ -351,6 +354,14 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		03A8CFD3250C2599006870ED /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				03A8CFD4250C25A9006870ED /* CommonEnums.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,6 +509,7 @@
 				03958A4525091EE900359AF9 /* Constants.swift in Sources */,
 				03958A5125095D0C00359AF9 /* DetailPresenter.swift in Sources */,
 				03685A852507EF3E00764D95 /* UITableView.swift in Sources */,
+				03A8CFD5250C25A9006870ED /* CommonEnums.swift in Sources */,
 				03685AA4250811B100764D95 /* PostInteractor.swift in Sources */,
 				03685A9E2507F42100764D95 /* PostModule.swift in Sources */,
 				03A23DCA250A81EF00FB79E9 /* UIViewController.swift in Sources */,

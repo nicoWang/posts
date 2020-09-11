@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 protocol PostModuleProtocol: AnyObject {
-    func postViewController() -> UINavigationController
+    func postViewController() -> UISplitViewController
 }
 
 class PostModule: PostModuleProtocol {
-    func postViewController() -> UINavigationController {
+    func postViewController() -> UISplitViewController {
         let view = PostViewController()
         let navigation = UINavigationController(rootViewController: view)
         let api = PostApi()
@@ -29,8 +29,18 @@ class PostModule: PostModuleProtocol {
         
         api.interactor = interactor
         
-        view.presenter = presenter
+        let detailView = DetailViewController()
+        let detailPresenter = DetailPresenter(item: RedditModel())
         
-        return navigation
+        detailPresenter.view = detailView
+        detailView.presenter = detailPresenter
+        view.presenter = presenter
+        wireframe.delegate = detailPresenter
+        
+        let splitViewController = UISplitViewController()
+        splitViewController.viewControllers = [navigation, detailView]
+        splitViewController.delegate = view
+
+        return splitViewController
     }
 }
