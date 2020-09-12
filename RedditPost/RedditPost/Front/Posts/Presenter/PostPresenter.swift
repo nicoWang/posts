@@ -74,8 +74,11 @@ private extension PostPresenter {
     }
     
     func getPosts() {
+        Loader.sharedLoader.start()
+
         interactor?.getPosts(completion: { posts in
             DispatchQueue.main.async {
+                Loader.sharedLoader.hide()
                 self.posts = posts
                 self.view.refresh()
             }

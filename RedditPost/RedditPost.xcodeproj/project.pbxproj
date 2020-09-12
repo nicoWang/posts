@@ -28,6 +28,8 @@
 		03685AA02508117500764D95 /* PostWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685A9F2508117500764D95 /* PostWireframe.swift */; };
 		03685AA22508119400764D95 /* PostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685AA12508119400764D95 /* PostPresenter.swift */; };
 		03685AA4250811B100764D95 /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03685AA3250811B100764D95 /* PostInteractor.swift */; };
+		038A0BF9250D1A6E004BE093 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A0BF7250D1A6D004BE093 /* Loader.swift */; };
+		038A0BFA250D1A6E004BE093 /* Loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A0BF8250D1A6D004BE093 /* Loader.xib */; };
 		03958A4225091DC300359AF9 /* PostApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A4125091DC300359AF9 /* PostApi.swift */; };
 		03958A4525091EE900359AF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A4425091EE900359AF9 /* Constants.swift */; };
 		03958A4C25095B3400359AF9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03958A4A25095B3400359AF9 /* DetailViewController.swift */; };
@@ -84,6 +86,8 @@
 		03685A9F2508117500764D95 /* PostWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWireframe.swift; sourceTree = "<group>"; };
 		03685AA12508119400764D95 /* PostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenter.swift; sourceTree = "<group>"; };
 		03685AA3250811B100764D95 /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
+		038A0BF7250D1A6D004BE093 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		038A0BF8250D1A6D004BE093 /* Loader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Loader.xib; sourceTree = "<group>"; };
 		03958A4125091DC300359AF9 /* PostApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApi.swift; sourceTree = "<group>"; };
 		03958A4425091EE900359AF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		03958A4A25095B3400359AF9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +307,15 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		038A0BF6250D1A60004BE093 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				038A0BF7250D1A6D004BE093 /* Loader.swift */,
+				038A0BF8250D1A6D004BE093 /* Loader.xib */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		03958A4025091DAD00359AF9 /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +327,7 @@
 		03958A4325091E6D00359AF9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				038A0BF6250D1A60004BE093 /* Loader */,
 				03958A4425091EE900359AF9 /* Constants.swift */,
 			);
 			path = Common;
@@ -468,6 +482,7 @@
 			files = (
 				03685A932507F3B600764D95 /* PostViewController.xib in Resources */,
 				03958A4D25095B3400359AF9 /* DetailViewController.xib in Resources */,
+				038A0BFA250D1A6E004BE093 /* Loader.xib in Resources */,
 				03685A492507CD6D00764D95 /* LaunchScreen.storyboard in Resources */,
 				03685A982507F3CF00764D95 /* PostCell.xib in Resources */,
 				03685A462507CD6D00764D95 /* Assets.xcassets in Resources */,
@@ -505,6 +520,7 @@
 				03685A742507CE6700764D95 /* RedditModel.swift in Sources */,
 				03685A842507EF3E00764D95 /* UIView.swift in Sources */,
 				03685A832507EF3E00764D95 /* UITableViewCell.swift in Sources */,
+				038A0BF9250D1A6E004BE093 /* Loader.swift in Sources */,
 				03958A4F25095CCA00359AF9 /* DetailModule.swift in Sources */,
 				03958A4525091EE900359AF9 /* Constants.swift in Sources */,
 				03958A5125095D0C00359AF9 /* DetailPresenter.swift in Sources */,

@@ -79,6 +79,8 @@ extension PostViewController: PostCellDelegate {
 }
 private extension PostViewController {
     func bind() {
+        Loader.sharedLoader.start()
+
         title = "Reddit Posts"
         view.backgroundColor = .black
         tableView.backgroundColor = .black
